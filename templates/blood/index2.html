@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+{% include "blood/navbar.html" %}
+{% block style%}
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    .jambu{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  </style>
+{% endblock style%}
+  
+{% block content %}
+  
+<main>
+
+
+  <div class="p-5 jambu bg-light rounded-3">
+    <div class="container-fluid  py-5">
+      <h1 class="display-5  fw-bold"><span style="color:#aa00ff;">Donate Blood.</span><span style="color:#00ff15;"> Save A Life.</span></h1>
+      <p class="col-md-8 fs-4">Blood Donation Costs You Nothing, But It Can Mean The World To Someone In Need. 
+         Donate Blood Because You Never Know How Helpful It Might Be To Someone. Donate Blood So That Other People Are Also Encouraged To Do So.
+      </p>
+      <a class="btn btn-primary btn-lg" href="/donor/donorsignup" style="background-color:#aa00ff; border: none;" type="button">
+        Donate Blood</a>
+    </div>
+  </div>
+
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-bg-dark rounded-3">
+        <h2 style="color:#aa00ff;">Ragister As Doner</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra nec ex id bibendum. Aliquam auctor venenatis dictum. Cras sed augue luctus, pharetra nisi ac, porta leo. Etiam id ornare sem. Etiam finibus enim id orci porttitor ornare. Aliquam rhoncus gravida nulla tempus euismod. Duis in ipsum eleifend, pulvinar enim nec, fringilla mi. Aliquam dapibus urna eget purus pharetra lacinia.</p>
+       
+        <a href="/patient/patientsignup" class="button btn btn-outline-secondary">Get Started</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <h2 style="color:#aa00ff;">Ragister As Patient</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra nec ex id bibendum. Aliquam auctor venenatis dictum. Cras sed augue luctus, pharetra nisi ac, porta leo. Etiam id ornare sem. Etiam finibus enim id orci porttitor ornare. Aliquam rhoncus gravida nulla tempus euismod. Duis in ipsum eleifend, pulvinar enim nec, fringilla mi. Aliquam dapibus urna eget purus pharetra lacinia.</p>
+        
+        <a href="/donor/donorsignup" class="button btn btn-outline-secondary">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+{% endblock content %}
+{% include "blood/footer.html" %}
+
+</body>
+</html>

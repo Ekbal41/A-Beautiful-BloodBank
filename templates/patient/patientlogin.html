@@ -1,0 +1,77 @@
+{%load static%}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+ 
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="{% static "css/main.css" %}"rel="stylesheet" media="all">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    {% include "blood/navbar.html" %}
+   
+<section class="vh-100">
+    <div class="jumbotron p-3 p-md-5 text-dark bg-light">
+        <div class="col-md-6 px-0">
+          <h1 class="display">Hope You are doing well.😊</h1>
+        </div>
+      </div>
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="{% static 'image/alogin.svg' %}"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form method="POST">
+            {% csrf_token %}
+          
+        
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <div class="name">Username</div>
+            <div class="input-group">
+                                    
+                {% render_field form.username class="form-control form-control-lg" %}
+            </div>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <div class="name">Password</div>
+            <div class="input-group">
+                                    
+                {% render_field form.password class="form-control form-control-lg" %}
+            </div>
+            <br>
+            <div>
+                <button class="btn btn--radius-2 " style="background-color:#aa00ff ;color: white;" type="submit">Login</button>
+            </div><br>
+            <p style="text-align: center;">Does not have an account ? <a style="text-decoration: none;" href="/patient/patientsignup">Click here to register</a></p>
+        </form>
+      </div>
+    </div>
+ </div>
+</section>
+<br>
+<br>
+{% include "blood/footer.html" %}
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+</html>

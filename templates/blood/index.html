@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .xyz{
+          margin-bottom: 0px;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      </style>
+      
+</head>
+
+
+<body>
+  {% include "blood/navbar.html" %}
+<br>
+<section id="section-jumbotron" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+    <div class="container text-center">
+       
+     
+        ><img src="{% static "image/homesvg.svg" %}" alt="logo">
+      
+      
+    </div>  
+  </section>
+
+
+  <div class="jumbotron" style="margin-top: 0px;margin-bottom: 0px;">
+
+    <p class="lead text-center">
+
+Donating blood has benefits for your emotional and physical health. According to a report by the Mental Health Foundation, helping others can:
+
+Reduce stress.
+Improve your emotional well-being.
+Benefit your physical health.
+Help get rid of negative feelings.
+Provide a sense of belonging and reduce isolation.
+
+Research has found further evidence of the health benefits that come specifically from donating blood.
+      </p>
+    
+    <p class="text-center">- Mental Health Foundation</p>
+    
+  </div>
+  {% include "blood/footer.html" %}
+
+
+</body>
+
+</html>
